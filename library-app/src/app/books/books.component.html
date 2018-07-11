@@ -1,0 +1,38 @@
+<div class="container my-4">
+    <!-- titles -->
+    <div class="row" style="background-color: #d6d1d1;">
+      <div class="col-sm">
+        Id
+      </div>
+      <div class="col-sm">
+        Isbn
+      </div>
+      <div class="col-sm">
+        Title
+      </div>
+      <div class="col-sm">
+        Author
+      </div>
+      <div class="col-sm">
+        State
+      </div>
+    </div>
+    <!-- container -->
+    <div class="row border-bottom-item" *ngFor="let book of books">
+        <div class="col-sm">
+          {{ book.id }}
+        </div>
+        <div class="col-sm">
+          {{ book.isbn }}
+        </div>
+        <div class="col-sm">
+          {{ book.title }}
+        </div>
+        <div class="col-sm">
+          {{ book.author }}
+        </div>
+        <div class="col-sm">
+          {{ book.state}}
+        </div>
+      </div>    
+  </div>
