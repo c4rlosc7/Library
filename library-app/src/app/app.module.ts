@@ -6,6 +6,14 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { BooksComponent } from './books/books.component';
+import { BookService } from './books/book.service';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent },
+  { path: 'books', component: BooksComponent }
+];
 
 @NgModule({
   declarations: [
@@ -16,9 +24,10 @@ import { BooksComponent } from './books/books.component';
     BooksComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
