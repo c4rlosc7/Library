@@ -11,19 +11,20 @@ import { map } from 'rxjs/operators';
 export class BookService {
 
   private urlEndPoint: string = 'http://localhost:8080/api/books';
-  private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
+  private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 
   constructor(private http: HttpClient) { }
 
   getBooks(): Observable<Book[]> {
     // return of(BOOKS);
-    return this.http.get<Book[]>(this.urlEndPoint).pipe(
+    return this.http.get(this.urlEndPoint).pipe(
       map((response) => response as Book[])
     );
   }
 
   create(book: Book): Observable<Book> {
-    return this.http.post<Book>(this.urlEndPoint, book, { headers: this.httpHeaders });
+    console.log(book);
+    return this.http.post<Book>(this.urlEndPoint, book, { headers: this.httpHeaders});
   }
 
   getBook(id): Observable<Book> {
