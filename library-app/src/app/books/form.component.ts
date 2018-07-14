@@ -26,17 +26,17 @@ export class FormComponent implements OnInit {
   public create(): void {
     console.log(this.book);
     this.bookService.create(this.book)
-      .subscribe(cliente => {
+      .subscribe(book => {
         this.router.navigate(['/books']);
-        // swal('Nuevo cliente', `Cliente ${book.nombre} creado con éxito!!!`, 'success')
+        // swal('New book', `Book ${book.title} created success!!!`, 'successful')
       });
   }
 
   public update(): void {
     this.bookService.update(this.book)
-      .subscribe(cliente => {
-        this.router.navigate(['/clientes']);
-        // swal('Cliente Actualizado', `Cliente ${cliente.nombre} actualizado con éxito!!!`, 'success')
+      .subscribe(book => {
+        this.router.navigate(['/books']);
+        // swal('Update book', `Book ${book.title} updated success!!!`, 'success')
       });
   }
 
