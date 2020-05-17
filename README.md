@@ -41,6 +41,20 @@ $ git branch -l // lista de ramas creadas en el repo
 
 ```console
 
+$ git tag v0.1.0
+
+$ git tag
+v0.1.0
+
+$ git tag -l
+v0.1.0
+
+$ git tag -l "0.1.*" // filter
+v0.1.0
+
+$ git tag -d v0.1.0 // delete tag
+Delete tag 'v0.1.0' (was 1234234u)
+
 ```
 
 ## Creando Feature
