@@ -50,6 +50,18 @@ $ git checkout develop // ubicarnos en la rama develop
 
 $ git flow feature start feature_git_flow_summary // creando nueva feature
 
+$ git flow feature start microservice-architecture
+Switched to a new branch 'feature/microservice-architecture'
+
+Summary of actions:
+- A new branch 'feature/microservice-architecture' was created, based on 'develop'
+- You are now on branch 'feature/microservice-architecture'
+
+Now, start committing on your feature. When done, use:
+
+     git flow feature finish microservice-architecture
+
+
 $ git checkout develop // ubicarnos en la rama develop
 
 $ git flow feature finish feature_git_flow_summary // finalizamos la feature
