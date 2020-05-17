@@ -11,6 +11,8 @@ $ git branch develop // partiendo de master, se crea develop
 
 $ git push -u origin develop // backup de la rama master
 
+$ git flow init
+
 $ git branch -l // lista de ramas creadas en el repo
   develop
 * master
