@@ -13,9 +13,34 @@ $ git push -u origin develop // backup de la rama master
 
 $ git flow init
 
+Which branch should be used for bringing forth production releases?
+   - develop
+   - master
+Branch name for production releases: [master]
+
+Which branch should be used for integration of the "next release"?
+   - develop
+Branch name for "next release" development: [develop]
+
+How to name your supporting branch prefixes?
+Feature branches? [feature/]
+Bugfix branches? [bugfix/]
+Release branches? [release/]
+Hotfix branches? [hotfix/]
+Support branches? [support/]
+Version tag prefix? []
+Hooks and filters directory? [C:/Users/carlmacd/Desktop/Library/.git/hooks]
+
+
 $ git branch -l // lista de ramas creadas en el repo
   develop
 * master
+```
+
+## Uso de Tags
+
+```console
+
 ```
 
 ## Creando Feature
