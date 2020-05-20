@@ -1,100 +1,111 @@
-# Library
-Library
+# 📕 📗 📙 [Library](https://github.com/markdown-it/markdown-it-emoji)
 
-___
-# Git Flow
+## 💻 [Clean Architecture](https://github.com/markdown-it/markdown-it-emoji)
 
-## Iniciando git flow
-
-```console
-$ git branch develop // partiendo de master, se crea develop
-
-$ git push -u origin develop // backup de la rama master
-
-$ git flow init
-
-Which branch should be used for bringing forth production releases?
-   - develop
-   - master
-Branch name for production releases: [master]
-
-Which branch should be used for integration of the "next release"?
-   - develop
-Branch name for "next release" development: [develop]
-
-How to name your supporting branch prefixes?
-Feature branches? [feature/]
-Bugfix branches? [bugfix/]
-Release branches? [release/]
-Hotfix branches? [hotfix/]
-Support branches? [support/]
-Version tag prefix? []
-Hooks and filters directory? [C:/Users/carlmacd/Desktop/Library/.git/hooks]
-
-
-$ git branch -l // lista de ramas creadas en el repo
-  develop
-* master
+```bash
+├── app
+|   ├──book
+|   |   ├── infrastructura
+|   │   │   ├── settings
+|   │   │   |   ├── SettingsBean.java
+|   │   │   ├── controller
+|   │   │   |   ├── commands
+|   │   │   |   |   ├── ControllerCommandsBook.java
+|   │   │   |   ├── queries
+|   │   │   |   |   ├── ControllerQueriesBook.java
+|   │   │   ├── persistence
+|   │   │   |   ├── adapter
+|   │   │   |   |   ├── dao
+|   │   │   |   |   |   ├── DaoBookInMemory.java
+|   │   │   |   ├── entidad
+|   │   │   |   |   ├── EntityBook.java
+|   │   │   |   ├── jpa
+|   │   │   |   |   ├── JPABook.java
+|   │   │   |   ├── mapper
+|   │   │   |   |   ├── MapperBook.java
+|   │   ├── application
+|   │   │   ├── factory
+|   │   │   |   ├── FactoryBook.java
+|   │   │   ├── handler
+|   │   │   |   ├── HandlerListBooks.java
+|   │   ├── domain
+|   │   │   ├── model
+|   │   │   |   ├── dto
+|   │   │   |   ├── entities
+|   │   │   ├── port
+|   │   │   |   ├── dao
+|   │   │   |   ├── repository
+|   │   │   ├── repository
+|   │   │   |   ├── RepositoryBook.java
+|   │   │   ├── services
+|   │   │   |   ├── ServiceListBook.java
+|   │   └── ApiApplication.java
+├── pom.xml
+├── JenkinsFile
+├── sonar-project.properties
+├── .gitignore
+└── README.md
 ```
 
-## Uso de Tags
+# 💿 [Application Properties](https://github.com/markdown-it/markdown-it-emoji)
+```bash
+server.port: 8081
+server.servlet.context-path: /books
 
-```console
+# H2
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2
+spring.datasource.url=jdbc:h2:mem:~/books
+spring.datasource.username=sa
+spring.datasource.password=
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.platform=h2
 
-$ git tag v0.1.0
-
-$ git tag
-v0.1.0
-
-$ git tag -l
-v0.1.0
-
-$ git tag -l "0.1.*" // filter
-v0.1.0
-
-$ git tag -d v0.1.0 // delete tag
-Delete tag 'v0.1.0' (was 1234234u)
-
+# Datasource
+#spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.hibernate.ddl-auto = update
+spring.datasource.initialize=true
 ```
 
-## Creando Feature
+# 📖 [Books List JSON](https://github.com/markdown-it/markdown-it-emoji)
 
-```console
-$ git checkout develop // ubicarnos en la rama develop
-
-$ git flow feature start feature_git_flow_summary // creando nueva feature
-
-$ git flow feature start microservice-architecture
-Switched to a new branch 'feature/microservice-architecture'
-
-Summary of actions:
-- A new branch 'feature/microservice-architecture' was created, based on 'develop'
-- You are now on branch 'feature/microservice-architecture'
-
-Now, start committing on your feature. When done, use:
-
-     git flow feature finish microservice-architecture
-
-
-$ git checkout develop // ubicarnos en la rama develop
-
-$ git flow feature finish feature_git_flow_summary // finalizamos la feature
+```json
+[
+    {
+        "id": 1,
+        "isbn": "9781593275846",
+        "title": "Eloquent JavaScript, Second Edition",
+        "subtitle": "A Modern Introduction to Programming",
+        "author": "Marijn Haverbeke",
+        "published": "2014-12-14T00:00:00.000Z",
+        "pages": 472,
+        "description": "JavaScript lies at the heart of almost every modern web application.",
+        "website": "http://eloquentjavascript.net/",
+        "state": "available"
+    },
+    {
+        "id": 2,
+        "isbn": "9781449331818",
+        "title": "Learning JavaScript Design Patterns",
+        "subtitle": "A JavaScript and jQuery Developer Guide",
+        "author": "Addy Osmani",
+        "published": "2014-12-14T00:00:00.000Z",
+        "pages": 472,
+        "description": "JavaScript lies at the heart of almost every modern web application.",
+        "website": "http://eloquentjavascript.net/",
+        "state": "available"
+    },
+    {
+        "id": 3,
+        "isbn": "9781449365035",
+        "title": "Speaking JavaScript",
+        "subtitle": "An In-Depth Guide for Programmers",
+        "author": "Axel Rauschmayer",
+        "published": "2014-12-14T00:00:00.000Z",
+        "pages": 472,
+        "description": "JavaScript lies at the heart of almost every modern web application.",
+        "website": "http://eloquentjavascript.net/",
+        "state": "available"
+    }
+]
 ```
-
-## Creando Release
-
-```console
-$ git flow release start release_0.1.0 // crear release
-
-$ git flow release finish 'elease_0.1.0' // finalizar el release
-```
-
-## Creando Hotfix
-
-```console
-$ git flow hotfix start hotfix_branch
-
-$ git flow hotfix finish hotfix_branch
-```
-
-[atlassian gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
