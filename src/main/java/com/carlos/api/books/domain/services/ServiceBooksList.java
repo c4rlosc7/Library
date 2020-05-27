@@ -4,6 +4,8 @@ import com.carlos.api.books.domain.exceptions.ExceptionsBook;
 import com.carlos.api.books.domain.model.dto.DtoBook;
 import com.carlos.api.books.domain.port.dao.DaoBook;
 import org.slf4j.ILoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -11,7 +13,7 @@ import java.util.List;
 
 public class ServiceBooksList {
 
-    public static final String lIST_BOOK_IS_EMPTY = "NO SE ENCONTRARON DATOS";
+    private static final Logger logger = LoggerFactory.getLogger(ServiceBooksList.class);
 
     private DaoBook daoBookPort;
 
@@ -24,8 +26,9 @@ public class ServiceBooksList {
         dtoBookList = this.daoBookPort.getBookList();
 
         if (dtoBookList.isEmpty()) {
-            throw new ExceptionsBook(lIST_BOOK_IS_EMPTY);
+            throw new ExceptionsBook("No se encontro registros en la Base de Datos");
         }
+        logger.info("dtoBookList{}", dtoBookList);
         return this.daoBookPort.getBookList();
     }
 
