@@ -1,4 +1,4 @@
-package com.carlos.api.books.domain.model.dto;
+package com.carlos.api.books.application.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,10 +9,9 @@ import java.io.Serializable;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class DtoBook implements Serializable {
-
+@NoArgsConstructor
+public class BookSerializable implements Serializable {
     private String isbn;
     private String title;
     private String subtitle;
@@ -22,5 +21,4 @@ public class DtoBook implements Serializable {
     private String description;
     private String website;
     private String state;
-
 }

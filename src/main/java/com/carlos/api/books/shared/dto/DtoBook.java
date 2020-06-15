@@ -1,14 +1,17 @@
-package com.carlos.api.books.domain.model.entities;
+package com.carlos.api.books.shared.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.io.Serializable;
 
 @Getter
 @Setter
 @AllArgsConstructor
-public class EntityBook {
-
+@NoArgsConstructor
+public class DtoBook implements Serializable {
     private String isbn;
     private String title;
     private String subtitle;
@@ -18,5 +21,4 @@ public class EntityBook {
     private String description;
     private String website;
     private String state;
-
 }

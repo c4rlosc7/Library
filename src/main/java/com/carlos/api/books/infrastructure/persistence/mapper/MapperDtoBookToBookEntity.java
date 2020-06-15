@@ -1,7 +1,7 @@
 package com.carlos.api.books.infrastructure.persistence.mapper;
 
-import com.carlos.api.books.domain.model.dto.DtoBook;
 import com.carlos.api.books.infrastructure.persistence.entities.EntityBook;
+import com.carlos.api.books.shared.dto.DtoBook;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,4 +29,5 @@ public class MapperDtoBookToBookEntity {
         entityBook.setState(dtoBook.getState());
         return entityBook;
     }
+
 }

@@ -1,17 +1,13 @@
-package com.carlos.api.books.domain.model.dto;
+package com.carlos.api.books.domain.model.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.io.Serializable;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class DtoBook implements Serializable {
+public class EntityDomainBook {
 
     private String isbn;
     private String title;

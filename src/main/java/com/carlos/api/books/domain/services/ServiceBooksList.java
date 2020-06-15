@@ -1,9 +1,8 @@
 package com.carlos.api.books.domain.services;
 
 import com.carlos.api.books.domain.exceptions.ExceptionsBook;
-import com.carlos.api.books.domain.model.dto.DtoBook;
 import com.carlos.api.books.domain.port.dao.DaoBook;
-import org.slf4j.ILoggerFactory;
+import com.carlos.api.books.shared.dto.DtoBook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
