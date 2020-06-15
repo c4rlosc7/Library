@@ -1,5 +1,5 @@
 /* Populate table books */
-INSERT INTO books (isbn, title, subtitle, author, published, pages, description, website, state) VALUES('9781593275846', 'Eloquent JavaScript, Second Edition', 'A Modern Introduction to Programming', 'Marijn Haverbeke', '2014-12-14T00:00:00.000Z', 472, 'JavaScript lies at the heart of almost every modern web application.', 'http://eloquentjavascript.net/', 'available');
+/*INSERT INTO books (isbn, title, subtitle, author, published, pages, description, website, state) VALUES('9781593275846', 'Eloquent JavaScript, Second Edition', 'A Modern Introduction to Programming', 'Marijn Haverbeke', '2014-12-14T00:00:00.000Z', 472, 'JavaScript lies at the heart of almost every modern web application.', 'http://eloquentjavascript.net/', 'available');
 
 INSERT INTO books (isbn, title, subtitle, author, published, pages, description, website, state) VALUES('9781449331818', 'Learning JavaScript Design Patterns', 'A JavaScript and jQuery Developer Guide', 'Addy Osmani', '2014-12-14T00:00:00.000Z', 472, 'JavaScript lies at the heart of almost every modern web application.', 'http://eloquentjavascript.net/', 'available');
 

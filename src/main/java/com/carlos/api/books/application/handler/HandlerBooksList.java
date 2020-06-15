@@ -1,7 +1,7 @@
 package com.carlos.api.books.application.handler;
 
-import com.carlos.api.books.domain.model.dto.DtoBook;
 import com.carlos.api.books.domain.services.ServiceBooksList;
+import com.carlos.api.books.shared.dto.DtoBook;
 import org.springframework.stereotype.Component;
 
 import java.util.Collection;

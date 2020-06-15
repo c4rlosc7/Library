@@ -1,22 +1,22 @@
 package com.carlos.api.books.infrastructure.persistence.mapper;
 
-import com.carlos.api.books.domain.model.dto.DtoBook;
 import com.carlos.api.books.infrastructure.persistence.entities.EntityBook;
+import com.carlos.api.books.shared.dto.DtoBook;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MapperBook {
+public class MapperBookEntityToDtoBook {
 
-    public static List<DtoBook> transformListEntityToDto(List<EntityBook> booksListEntity) {
+    public static List<DtoBook> mapperListEntityBookToDtoBook(List<EntityBook> booksListEntity) {
         List<DtoBook> listBooks = new ArrayList<>();
         for (EntityBook book: booksListEntity) {
-            listBooks.add(transformToDomain(book));
+            listBooks.add(mapperEntityBookToDtoBook(book));
         }
         return listBooks;
     }
 
-    public static DtoBook transformToDomain(EntityBook bookEntity) {
+    public static DtoBook mapperEntityBookToDtoBook(EntityBook bookEntity) {
         DtoBook dtoBook = new DtoBook();
         dtoBook.setIsbn(bookEntity.getIsbn());
         dtoBook.setTitle(bookEntity.getTitle());
