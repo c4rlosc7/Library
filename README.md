@@ -1,5 +1,7 @@
 # 📕 📗 📙 [Library](https://github.com/markdown-it/markdown-it-emoji)
 
+The library is a room containing collections of __books__, __periodicals__, for use, or borrowing by the public or the __members__ of an institution. It provides physical or digital access to material and maybe a physical location or a virtual space, or both. A library's collection can include __books__, __periodicals__, __newspapers__, __manuscripts__, __films__, __maps__, __prints__, __documents__, __microform__, __CDs__, __cassettes__, __videotapes__, __DVDs__, __Blu-ray__ __Discs__, __e-books__, __audiobooks__, __databases__, and other formats.
+
 ## 💻 [Clean Architecture](https://github.com/markdown-it/markdown-it-emoji)
 
 ```bash
@@ -79,6 +81,7 @@ spring.datasource.initialize=true
         "author": "Marijn Haverbeke",
         "published": "2014-12-14T00:00:00.000Z",
         "pages": 472,
+        "type": "book",
         "description": "JavaScript lies at the heart of almost every modern web application.",
         "website": "http://eloquentjavascript.net/",
         "state": "available"
@@ -91,6 +94,7 @@ spring.datasource.initialize=true
         "author": "Addy Osmani",
         "published": "2014-12-14T00:00:00.000Z",
         "pages": 472,
+        "type": "book",
         "description": "JavaScript lies at the heart of almost every modern web application.",
         "website": "http://eloquentjavascript.net/",
         "state": "available"
@@ -98,13 +102,14 @@ spring.datasource.initialize=true
     {
         "id": 3,
         "isbn": "9781449365035",
-        "title": "Speaking JavaScript",
-        "subtitle": "An In-Depth Guide for Programmers",
+        "title": "The branching model",
+        "subtitle": "A successful Git branching model",
         "author": "Axel Rauschmayer",
-        "published": "2014-12-14T00:00:00.000Z",
+        "published": "2017-12-14T00:00:00.000Z",
         "pages": 472,
-        "description": "JavaScript lies at the heart of almost every modern web application.",
-        "website": "http://eloquentjavascript.net/",
+        "type": "paper",
+        "description": "This model was conceived in 2010, now more than 10 years ago, and not very long after Git itself came into being.",
+        "website": "https://nvie.com/posts/a-successful-git-branching-model/",
         "state": "available"
     }
 ]
