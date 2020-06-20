@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("api/private/book")
+@RequestMapping("api/book")
 public class ControllerQueries {
     private final HandlerBooksList handlerBooksList;
 

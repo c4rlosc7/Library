@@ -9,7 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/private/book")
+@RequestMapping("api/book")
 public class ControllerCommands {
     private final HandlerCreateBook handlerCreateBook;
 
